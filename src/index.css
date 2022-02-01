@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.mainLayout{
+  display: flex;
+}
+.formLayout{
+  width: 40%;
+    margin: 1px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.formContent{
+  border: 1px solid dodgerblue;
+    border-radius: 10px;
+    width: 100%;
+}
+.title{
+  background-color: dodgerblue;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+}
+.row{
+  display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    position: relative;
+}
+.row:nth-child(1) {
+  align-items: flex-start!important;
+}
+label{
+  flex-basis: 30%;
+  font-size:0.9rem;
+}
+input,select{
+  flex-basis: 70%;
+    height: 30px;
+    padding: 0;
+    border-width: 1px;
+}
+input:focus-visible,
+select:focus-visible{
+  outline: none;
+}
+input[type="file"] {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.uploadIcon{
+  position: absolute;
+  cursor: pointer;
+    z-index: 1;
+    right: 20px;
+    background: dodgerblue;
+    color: white;
+    width: 63.5%;
+    height: 70px;
+}
+.submitButtonLayout{
+    direction:rtl;
+}
+.buttons{
+  cursor: pointer;
+  margin: 10px 0px 10px 10px;
+  width: 75px;
+  padding: 10px;
+  border-radius: 7px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  background: gray;
+}
+button:first-child{
+  background:dodgerblue;
+}
+.editButtonLayout{
+  text-align: right;
+  margin: 0px 20px;
+  direction: rtl;
+}
+.leaflet-popup-content{
+  margin: 0px !important;;
+}
+.markerTitle{
+  background-color: #b1dc9f;
+  color: white;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 10px 10px 0px 0px;
+}
+.mapView{
+  /* width: 50%; */
+    margin: auto;
+}
+@media (max-width: 1020px){
+  .mainLayout{
+    flex-direction: column;
+  }
+  .formLayout{
+    width: 70%;
+  }
+}
